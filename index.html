@@ -11,12 +11,36 @@
         box-sizing: border-box;
       }
       body {
-        background-image: url("nataraja1.jpeg")
+        background-color: #000000;
+        background-image:
+          repeating-linear-gradient(
+            to right,
+            transparent 0 100px,
+            #25283b55 100px 101px
+          ),
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0 100px,
+            #25283b55 100px 101px
+          );
       }
 
-      
+      body::before {
+        position: absolute;
+        width: min(1400px, 90vw);
+        top: 10%;
+        left: 50%;
+        height: 90%;
+        transform: translateX(-50%);
+        content: "";
+        background-image: url(images/bg.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: top center;
+        pointer-events: none;
+      }
     </style>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="onn.css" />
   </head>
   <body>
     <div class="banner">
@@ -54,24 +78,15 @@
         </div> -->
       </div>
       <div class="content">
-        <h1 class="verycooltext">LA FEST</h1>
+        <h1 data-content="LA FEST">LA FEST</h1>
         <div class="author">
-          
-          
+          <!-- <h2>LUN DEV</h2> -->
+          <!-- <p><b>Web Design</b></p> -->
           <p>CLICK CARDS TO SEE EVENT DETAILS</p>
         </div>
         <div class="model"></div>
       </div>
     </div>
-
-    <!-- <div id="modal">
-    <div class="modal-content">
-        <span id="closeBtn">&times;</span>
-        <img id="modalImg" alt="">
-        <h2 id="modalTitle"></h2>
-        <p id="modalDesc"></p>
-    </div>
-    </div> -->
 
     <div id="modal">
       <div class="modal-content">
@@ -215,7 +230,7 @@
             "3. Four teams will qualify for the final on-stage round.",
             "4. The on-stage round will comprise multiple sub-rounds, the details of which will be revealed on the day of the event.",
             "5. The judges' decisions will be final.",
-            "6. Vulgarity or obscenity in speech or actions will lead to disqualification."
+            "6. Vulgarity or obscenity in speech or actions will lead to disqualification.",
           ],
         },
 
@@ -233,7 +248,7 @@
             "4. Strict adherence to time limits for each segment is mandatory. Any deviation may result in penalties, including point deductions.",
             "5. Any form of vulgarity, obscenity, or the use of unparliamentary language is strictly prohibited. Such infractions will result in immediate point deductions or potential disqualification.",
             "6. The judges' decision will be final and irrevocable.",
-            "7. La Persona will crown only one winner."
+            "7. La Persona will crown only one winner.",
           ],
         },
 
@@ -247,7 +262,7 @@
             "3. Prelims rules: Speakers will be allowed one minute to deliver their points, after which the opposition can ask questions for a maximum of two minutes. A maximum of three questions is allowed.",
             "4. Finals rules: The finals will be centred around a moot court scenario. Participants will not be allowed to change their stand during the debate.",
             "5. During the rebuttal session, the speaker is not allowed to seek the help of his teammate, and cross-questioning is not allowed. No new arguments may be introduced in the rebuttal period.",
-            "6. Details regarding the semi-finals and finals will be provided on the day of the event."
+            "6. Details regarding the semi-finals and finals will be provided on the day of the event.",
           ],
         },
 
@@ -263,7 +278,7 @@
             "5. In case of a tie, starred questions will be used as tiebreakers.",
             "6. The top six teams will advance to the final round.",
             "7. The finals may include question formats such as Pounce and Bounce, Buzzer, or Rapid Fire.",
-            "8. The quizmasters' decision is final."
+            "8. The quizmasters' decision is final.",
           ],
         },
 
@@ -278,7 +293,7 @@
             "4. The puzzle-solving round will involve solving a series of puzzles within a time limit.",
             "5. The final on-stage round will involve a live puzzle-solving challenge in front of an audience.",
             "6. The team with the highest score at the end of all rounds will be declared the winner.",
-            "7. The judges' decision will be final and binding."
+            "7. The judges' decision will be final and binding.",
           ],
         },
 
